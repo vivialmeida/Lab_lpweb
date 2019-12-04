@@ -2,40 +2,26 @@ let idade = document.querySelector('#idade');
 let maiorlb = document.querySelector('#maior');
 let menorlb = document.querySelector('#menor');
 let lista = document.querySelector('#lista')
-let idades = new Array;
-
-
+let qtdMaior;
+let qtdMenor;
 
 
 document
     .querySelector('#btnEnviar')
     .addEventListener('click', function(event) {
-    adicionaVetor(idade.value);
-    gravaNaLista(idade.value)
-
+      event.preventDefault();
+      comparaIdade();
 
     });
-    
-    maiorlb.value = buscaMaior();
-    menorlb.value = buscaMaior();
 
 
-function buscaMaior(){
-  return Math.max(idades);
-        
-}
+function comparaIdade(){
+    if(idade.valueAsNumber<18){
+      menorlb.valueAsNumber = (menorlb.valueAsNumber + 1) ;
+    }else {
+      maiorlb.valueAsNumber = (maiorlb.valueAsNumber + 1) ;
+    }    
 
-function adicionaVetor(a){
-    idades.push(a)  
-
-}
-
-function gravaNaLista(a){
-  let itemLista = document.createElement("li");
-  itemLista.value = a;
-
-  itemLista.innerHTML = itemLista.appendChild(document.createTextNode(a) )
-  
 }
 
 
