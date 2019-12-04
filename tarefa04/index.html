@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pedido de Venda</title>
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+</head>
+
+<body class="container">
+
+    <h1 id="titulo" class="text-center">Pedido Lanchonete</h1>
+
+    <form class="form">
+
+        <div class="inputs">
+            <label>Código do Pedido: </label>
+            <input type="number" id="cod" size="10px"> <br>
+
+            <label>Quantidade:</label>
+            <input type="number" id="qtd" size="10" >
+
+        </div>
+
+        <button type="submit" id="calcular"> Calcular Pedido</button>
+       
+        <div class="form-group">
+            <table border= "1px" class="produto">
+
+          <tr>
+            <th>Especificação</th>
+            <th> Código</th>
+            <th> Preço</th>
+          </tr>  
+         <tr class=" cach">
+            <td>Cachorro Quente</td>
+            <td class=" codigo">100</td>
+            <td >1,20</td>
+         </tr>
+         <tr class=" b_simples">
+            <td>Bauru Simples</td>
+            <td class=" codigo"> 101</td>
+            <td>1,30</td>
+         </tr>
+         <tr class="b_ovo">
+            <td>Bauru Com Ovo</td>
+            <td class=" codigo">102</td>
+            <td>1,50</td>
+         </tr>
+         <tr  class="hamb">
+            <td>Hamburguer</td>
+            <td class=" codigo">103</td>
+            <td>1,20</td>
+         </tr>
+         <tr class="x_burger">
+            <td >Cheeseburguer</td>
+            <td class=" codigo">104</td>
+            <td> cla1,30</td>
+         </tr>
+         <tr>
+            <td class="refri">Refrigerante</td>
+            <td class=" codigo">105</td>
+            <td>1,00</td>
+         </tr>
+        <tfoot>
+            <tr> 
+                <th colspan="2" class="text-right">Total</td> 
+                <td  class="total-valor" id="total">R$:0</td></tr>
+        </tfoot>
+    </table>
+  
+    
+    <script src="script/pedido.js">
+
+    </script>
+
+</body>
+
+</html>
