@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transforma Data Em Extenso</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    
+</head>
+<body class="container">
+
+	<h1 class="text-center">Transforma Data Em Extenso</h1>
+    <div style="margin-bottom: 2rem">
+    
+	    <form class="form" onsubmit="transformaDataEmExtenso(event)">
+	        
+	        <div class="form-group">
+	            <label for="data">Digite uma data: </label>
+	            <input type="text" id="data" value="01/01/2018" class="form-control" required autofocus value="" />
+	        </div>
+
+	        <div class="text-center">
+	            <button id="btnCadastro" class="btn btn-primary" 
+	                    type="submit">Gerar</button>
+	            <button class="btn btn-default" 
+	                    type="reset">Limpar</button>
+	        </div>
+	    
+	    </form>
+   	</div> 
+
+    <div id="js-divResultado"></div>
+
+    <script type="text/javascript" src="script/script.js"></script>
+
+
+</body>
+</html>
