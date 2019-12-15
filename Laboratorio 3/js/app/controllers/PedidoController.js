@@ -6,13 +6,13 @@ class PedidoController {
         
         let $ = document.querySelector.bind(document);
        
-        this._inputNome = $('#nome' );
+        this._inputNome = $('#nome');
         this._inputN1 = $('#n1');
         this._inputN2 = $('#n2');
         this._inputN3 = $('#n3');
         this._inputFreq = $('#freq' );
-        this._LabelSitu= $('#situ');
-        this._Labelmedia= $('#media');
+        this._labelSitu= $('#situacao');
+        this._labelMedia= $('#media');
 
 
         this._pedido = new Pedido(); 
@@ -28,14 +28,16 @@ class PedidoController {
     
     adiciona(event ) {
         let media = 0;
-        
         event.preventDefault();
-      
+        media = this._calculaMedia();
+        this._atualizaSituaçao(media);
         let item = this._criaboletimAluno();
+      
+        
+       
         this._pedido.adiciona(item ); 
         this._pedidoView.update(this._pedido );
-        this._calculaMedia(item.n1,item.n2,item.n3);
-           this._atualizaSituaçao();
+     
 
     
 
@@ -51,10 +53,8 @@ class PedidoController {
             this._inputN2.value , 
             this._inputN3.value,
             this._inputFreq.value,
-            // this._LabelSitu.value,
-            // this._Labelmedia.value
-
-            
+            this._labelMedia.value,  
+            this._labelSitu.value,    
         );
     }
 
@@ -64,29 +64,32 @@ class PedidoController {
         this._inputN2.value = "";
         this._inputN3.value = "";
         this._inputFreq.value = "";
+        this._labelSitu.value ="";
+        this._labelMedia.value = "";
 
 
         this._inputNome.focus();
     }
 
-    _atualizaSituaçao(){
-
+    _atualizaSituaçao(media){
+        
     
-        if( this.media >= 70 && this._inputFreq > 75){
-        this._inputSituacao.value = "Aprovado";
+        if( media >= 70 && this._inputFreq.value >= 75){
+        this._labelSitu.value = "Aprovado";
         }else if (this.media < 30){
-            this._inputSituacao.value = "Reprovado";
+            this._labelSitu.value = "Reprovado";
         }else{
-            this._inputSituacao.value = "Prova Final";
+            this._labelSitu.value = "Prova Final";
         }
 
     }
 
   
-    _calculaMedia(a, b, c){
-        let media = (parseFloat(a) +parseFloat(b) + parseFloat(c))/3
+    _calculaMedia(){
+        let media = (parseFloat(this._inputN1.value) +parseFloat(this._inputN2.value) + parseFloat(this._inputN3.value))/3
        
         console.log(media);
+        this._labelMedia.value = media;
     
        return media;
         }

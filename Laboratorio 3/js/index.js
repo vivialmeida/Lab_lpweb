@@ -3,11 +3,13 @@ var campos = [
   document.querySelector('#n1'),
   document.querySelector('#n2'),
   document.querySelector('#n3'),
-  document.querySelector("#situacao"),
   document.querySelector('#freq'),
+  document.querySelector("#situacao"),
+  document.querySelector('#media'),
+
 ];
 
-console.log(campos);
+console.log(campos);  
 
 var tbody = document.querySelector('table tbody');
 
@@ -23,14 +25,15 @@ document.querySelector('.form').addEventListener('submit', function(event) {
        var td = document.createElement('td');
        td.textContent = campo.value;
        tr.appendChild(td);
+       console.log(campo);
    });
    
-  var tdSubTotal = document.querySelector("#media")
-  tdSubTotal.textContent = campos[1].value + campos[2].value+ campos[3]/3; 
+  // var tdSubTotal = document.querySelector("#media")
+  // tdSubTotal.textContent = campos[1].value + campos[2].value+ campos[3]/3; 
   
-  tr.appendChild(tdSubTotal);
+  // tr.appendChild(tdSubTotal);
   
-  tbody.appendChild(tr);
+  // tbody.appendChild(tr);
   
   campos[0].value = '';
   campos[1].value = 0;

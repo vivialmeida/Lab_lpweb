@@ -1,13 +1,16 @@
 class boletimAluno {
 
 
-    constructor(nome, n1, n2, n3, freq ) {
+    constructor(nome, n1, n2, n3, freq, media, situacao ) {
         
         this._nome = nome;
         this._n1 = n1;
         this._n2 = n2;
         this._n3 = n3;
         this._freq = freq;
+        this._media = media;
+        this._situacao = situacao;
+
 
         Object.freeze(this );
     }
@@ -34,5 +37,11 @@ class boletimAluno {
     
     get freq() {
         return this._freq;
+    }
+    get media() {
+        return this._media;
+    }
+    get situacao() {
+        return this._situacao;
     }
 }

@@ -29,6 +29,7 @@ class PedidoView extends View {
                         <td>${aluno.n2}</td>
                         <td>${aluno.n3}</td>
                         <td>${aluno.freq}</td>
+                        <td>${aluno.media}</td>
                         <td>${aluno.situacao}</td>
                         <td>${aluno.subTotal}</td>
                     </tr>

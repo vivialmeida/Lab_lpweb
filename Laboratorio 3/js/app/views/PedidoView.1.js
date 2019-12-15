@@ -22,7 +22,7 @@ class PedidoView {
                     
                     <tr>
                         <td>${aluno.nome}</td>
-                        <td>${aluno.quantidade}</td>
+                        <td>${aluno.}</td>
                         <td>${aluno.valor}</td> 
                         <td>${aluno.subTotal}</td>
                     </tr>
