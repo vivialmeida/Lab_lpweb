@@ -14,9 +14,9 @@ class PedidoView extends View {
                     <th>1° NOTA</th>
                     <th>2° NOTA</th>
                     <th>3° NOTA</th>
-                    <th>MEDIA</th>
-                    <th>SITUAÇÃO</th>
                     <th>FREQUENCIA</th>
+                    <th>SITUAÇÃO</th>
+                    <th>MEDIA</th>
                 </tr>
             </thead>
         

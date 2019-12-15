@@ -1,5 +1,7 @@
 class PedidoController {
     
+    
+
     constructor() {
         
         let $ = document.querySelector.bind(document);
@@ -9,7 +11,9 @@ class PedidoController {
         this._inputN2 = $('#n2');
         this._inputN3 = $('#n3');
         this._inputFreq = $('#freq' );
-        this.LabelSitu
+        this._LabelSitu= $('#situ');
+        this._Labelmedia= $('#media');
+
 
         this._pedido = new Pedido(); 
 
@@ -23,18 +27,21 @@ class PedidoController {
     }
     
     adiciona(event ) {
+        let media = 0;
         
         event.preventDefault();
       
         let item = this._criaboletimAluno();
         this._pedido.adiciona(item ); 
         this._pedidoView.update(this._pedido );
+        this._calculaMedia(item.n1,item.n2,item.n3);
+           this._atualizaSituaçao();
 
-        this._limpaFormulario();
-
+    
 
         this._mensagem.texto = `Aluno(a) ${item.nome} foi adicionado com sucesso.`;
         this._mensagemView.update(this._mensagem );
+        this._limpaFormulario();
     }
 
     _criaboletimAluno() {
@@ -44,6 +51,9 @@ class PedidoController {
             this._inputN2.value , 
             this._inputN3.value,
             this._inputFreq.value,
+            // this._LabelSitu.value,
+            // this._Labelmedia.value
+
             
         );
     }
@@ -61,17 +71,25 @@ class PedidoController {
 
     _atualizaSituaçao(){
 
-        let media = (this._inputN1.value + this._inputN2.value + this._inputN3.value)/3;
-        this.in
-        if( media >= 70 && this._inputFreq > 75){
+    
+        if( this.media >= 70 && this._inputFreq > 75){
         this._inputSituacao.value = "Aprovado";
-        }else if (media < 30){
+        }else if (this.media < 30){
             this._inputSituacao.value = "Reprovado";
         }else{
             this._inputSituacao.value = "Prova Final";
         }
 
     }
+
+  
+    _calculaMedia(a, b, c){
+        let media = (parseFloat(a) +parseFloat(b) + parseFloat(c))/3
+       
+        console.log(media);
+    
+       return media;
+        }
 
 
 }
