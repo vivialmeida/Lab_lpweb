@@ -15,7 +15,7 @@
    
     <div id="js-mensagem-view"></div>    
     
-    <form class="form" onsubmit="pedidoController.adiciona(event )">
+    <form class="form" onsubmit="boletimController.adiciona(event )">
         
         <div class="form-group">
             <label for="nome">Nome do Aluno: </label>
@@ -61,37 +61,19 @@
     
     </form>
    </div> 
-<!--  
-       <table class="table table-hover table-bordered">
-        <thead>
-            <tr>
-                <th>NOME</th>
-                <th>QUANTIDADE</th>
-                <th>VALOR UNITÁRIO</th>
-                <th>SUBTOTAL</th>
-            </tr>
-        </thead>
-        
-        <tbody>
-        </tbody>
-        
-        <tfoot></tfoot>
-    </table> 
--->
-
-    <div id="js-pedidoVendaView"></div>
+    <div id="js-boletimView"></div>
 
     <script src="js/app/models/boletimAluno.js"></script>
-    <script src="js/app/controllers/PedidoController.js"></script>
-    <script src="js/app/models/Pedido.js"></script>
+    <script src="js/app/controllers/BoletimController.js"></script>
+    <script src="js/app/models/Aluno.js"></script>
     <script src="js/app/views/View.js"></script>
-    <script src="js/app/views/PedidoView.js"></script>
+    <script src="js/app/views/TableView.js"></script>
     <script src="js/app/models/Mensagem.js"></script>
     <script src="js/app/views/MensagemView.js"></script>
 
     
     <script>
-       let pedidoController = new PedidoController();
+       let boletimController = new BoletimController();
     </script>
 
 </body>

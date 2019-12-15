@@ -1,4 +1,4 @@
-class Pedido {
+class Aluno {
    
     constructor() {
         this._aluno = [];

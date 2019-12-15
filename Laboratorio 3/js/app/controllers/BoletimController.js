@@ -1,4 +1,4 @@
-class PedidoController {
+class BoletimController {
     
     
 
@@ -16,10 +16,10 @@ class PedidoController {
         this._labelSitu= $('#situacao');
 
 
-        this._pedido = new Pedido(); 
+        this.aluno = new Aluno(); 
 
-        this._pedidoView = new PedidoView($('#js-pedidoVendaView') );
-        this._pedidoView.update(this._pedido );
+        this.tableView = new TableView($('#js-boletimView') );
+        this.tableView.update(this.aluno );
         
         this._mensagem = new Mensagem();
         this._mensagemView = new MensagemView($('#js-mensagem-view') );
@@ -36,8 +36,8 @@ class PedidoController {
       
         
        
-        this._pedido.adiciona(item ); 
-        this._pedidoView.update(this._pedido );
+        this.aluno.adiciona(item ); 
+        this.tableView.update(this.aluno );
      
 
     
@@ -79,7 +79,7 @@ class PedidoController {
     
         if( media >= 70 && this._inputFreq.value >= 75){
         this._labelSitu.value = "Aprovado";
-        this._labelPFinal.setAttribute("type", "hidden");
+        // this._labelPFinal.setAttribute("type", "hidden");
         }else if (this.media < 30 || this._inputFreq.value < 75){
             this._labelSitu.value = "Reprovado";
         }else if(media + parseFloat(final.value) >= 50){
@@ -89,6 +89,8 @@ class PedidoController {
               this._labelSitu.value = "Reprovado";
          }
 
+
+        
         
            
 

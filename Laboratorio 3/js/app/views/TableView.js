@@ -1,13 +1,8 @@
-class PedidoView extends View {
-
+class TableView extends View {
     constructor(elemento) {
-        super(elemento );
+        super(elemento);
     }
-
-    
-
-    _template(aluno ) {
-
+    _template(aluno) {
         return `
         <table class="table table-hover table-bordered">
             <thead>
@@ -25,7 +20,7 @@ class PedidoView extends View {
             </thead>
         
             <tbody>
-                ${aluno.getAlunos().map(aluno=> `
+                ${aluno.getAlunos().map(aluno => `
                     
                     <tr>
                         <td>${aluno.nome}</td>
@@ -44,14 +39,11 @@ class PedidoView extends View {
                 <tfoot >
                 <td colspan="7"  align="center" >Alunos Aprovados</td>
                 <td>
-                    ${(aluno.getAlunos().filter(aluno=>aluno.situacao =="Aprovado"))}
+                   
                 </td>
             </tfoot>
         </table>
         `;
-
-   
+        // ${(aluno.getAlunos().filter(aluno=>aluno.situacao =="Aprovado"))}
     }
 }
-
-
