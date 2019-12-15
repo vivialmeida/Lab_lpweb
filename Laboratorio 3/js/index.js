@@ -6,6 +6,8 @@ var campos = [
   document.querySelector('#freq'),
   document.querySelector("#situacao"),
   document.querySelector('#media'),
+  document.querySelector('#pfinal'),
+
 
 ];
 
@@ -36,11 +38,13 @@ document.querySelector('.form').addEventListener('submit', function(event) {
   // tbody.appendChild(tr);
   
   campos[0].value = '';
-  campos[1].value = 0;
-  campos[2].value = 0;
-  campos[3].value = 0;
-  campos[4].value = 0;
-  campos[5].value = 0;
+  campos[1].value = "";
+  campos[2].value = "";
+  campos[3].value = "";
+  campos[4].value = "";
+  campos[5].value = "";
+  campos[6].value = "";
+  campos[7].value = "";
   
   campos[0].focus();
    

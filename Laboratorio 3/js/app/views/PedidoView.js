@@ -4,6 +4,8 @@ class PedidoView extends View {
         super(elemento );
     }
 
+    
+
     _template(aluno ) {
 
         return `
@@ -15,8 +17,10 @@ class PedidoView extends View {
                     <th>2° NOTA</th>
                     <th>3° NOTA</th>
                     <th>FREQUENCIA</th>
-                    <th>SITUAÇÃO</th>
                     <th>MEDIA</th>
+                    <th>PROVA FINAL</th>
+                    <th>SITUACAO</th>
+
                 </tr>
             </thead>
         
@@ -30,22 +34,23 @@ class PedidoView extends View {
                         <td>${aluno.n3}</td>
                         <td>${aluno.freq}</td>
                         <td>${aluno.media}</td>
+                        <td>${aluno.pfinal}</td>
                         <td>${aluno.situacao}</td>
-                        <td>${aluno.subTotal}</td>
                     </tr>
                     
                 `).join('')}                
             </tbody>
 
-           <tfoot>
-                <td colspan="3"></td>
+                <tfoot >
+                <td colspan="7"  align="center" >Alunos Aprovados</td>
                 <td>
-                    ${aluno.getAlunos().reduce((total, item) => total + item.subTotal, 0.0)}
+                    ${(aluno.getAlunos().filter(aluno=>aluno.situacao =="Aprovado"))}
                 </td>
             </tfoot>
-            
         </table>
         `;
+
+   
     }
 }
 

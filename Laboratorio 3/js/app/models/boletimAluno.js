@@ -1,7 +1,7 @@
 class boletimAluno {
 
 
-    constructor(nome, n1, n2, n3, freq, media, situacao ) {
+    constructor(nome, n1, n2, n3, freq, media, pfinal, situacao) {
         
         this._nome = nome;
         this._n1 = n1;
@@ -9,7 +9,9 @@ class boletimAluno {
         this._n3 = n3;
         this._freq = freq;
         this._media = media;
+        this._pfinal = pfinal;
         this._situacao = situacao;
+
 
 
         Object.freeze(this );
@@ -43,5 +45,9 @@ class boletimAluno {
     }
     get situacao() {
         return this._situacao;
+    }
+
+    get pfinal() {
+        return this._pfinal;
     }
 }

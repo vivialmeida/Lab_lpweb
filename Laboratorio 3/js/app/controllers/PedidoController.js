@@ -11,8 +11,9 @@ class PedidoController {
         this._inputN2 = $('#n2');
         this._inputN3 = $('#n3');
         this._inputFreq = $('#freq' );
-        this._labelSitu= $('#situacao');
         this._labelMedia= $('#media');
+        this._labelPFinal= $('#pFinal');
+        this._labelSitu= $('#situacao');
 
 
         this._pedido = new Pedido(); 
@@ -30,7 +31,7 @@ class PedidoController {
         let media = 0;
         event.preventDefault();
         media = this._calculaMedia();
-        this._atualizaSituaçao(media);
+        this._atualizaSituaçao(media, this._labelPFinal);
         let item = this._criaboletimAluno();
       
         
@@ -53,8 +54,9 @@ class PedidoController {
             this._inputN2.value , 
             this._inputN3.value,
             this._inputFreq.value,
-            this._labelMedia.value,  
-            this._labelSitu.value,    
+            this._labelMedia.value,   
+            this._labelPFinal.value,
+            this._labelSitu.value,
         );
     }
 
@@ -64,23 +66,31 @@ class PedidoController {
         this._inputN2.value = "";
         this._inputN3.value = "";
         this._inputFreq.value = "";
-        this._labelSitu.value ="";
         this._labelMedia.value = "";
+        this._labelPFinal.value="";
+        this._labelSitu.value ="";
 
 
         this._inputNome.focus();
     }
 
-    _atualizaSituaçao(media){
+    _atualizaSituaçao(media, final){
         
     
         if( media >= 70 && this._inputFreq.value >= 75){
         this._labelSitu.value = "Aprovado";
-        }else if (this.media < 30){
+        this._labelPFinal.setAttribute("type", "hidden");
+        }else if (this.media < 30 || this._inputFreq.value < 75){
             this._labelSitu.value = "Reprovado";
-        }else{
-            this._labelSitu.value = "Prova Final";
-        }
+        }else if(media + parseFloat(final.value) >= 50){
+            this._labelPFinal.setAttribute("type", "number");
+            this._labelSitu.value= "Aprovado com exame final"
+         }else {
+              this._labelSitu.value = "Reprovado";
+         }
+
+        
+           
 
     }
 
