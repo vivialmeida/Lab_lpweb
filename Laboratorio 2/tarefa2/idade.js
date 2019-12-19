@@ -20,7 +20,8 @@ function comparaIdade(){
       menorlb.valueAsNumber = (menorlb.valueAsNumber + 1) ;
     }else {
       maiorlb.valueAsNumber = (maiorlb.valueAsNumber + 1) ;
-    }    
+    } 
+    idade.value= " ";   
 
 }
 

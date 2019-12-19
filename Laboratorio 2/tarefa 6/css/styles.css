@@ -1,0 +1,35 @@
+.form-control{
+    width: 250px;;
+}
+
+#cliente{
+    font-size:18px;
+}
+/* .btn-dark{
+    height:30px ;
+    font-size:19px;
+    text-align: center  ;
+} */
+
+body{
+    background-color:rgb(84, 171, 243);
+}
+
+.tipo{
+    font-size: 28px;
+    color: black;
+    font-style:  italic;
+}
+#img{
+    width:100px;
+    height: 100px;
+    opacity: 0.1;
+    margin-top: 10px;
+    margin-left: 500px;
+}
+
+hr{
+
+    height: 5px;
+    border: 0.02px ridge maroon
+}

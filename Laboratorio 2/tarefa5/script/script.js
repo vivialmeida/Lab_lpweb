@@ -1,9 +1,9 @@
-let data = document.getElementById("data").value;
+let data = document.getElementById("data");
 let corpo = document.getElementById("js-divResultado");
 
 function transformaDataEmExtenso(event) {
 	event.preventDefault();
-	corpo.innerHTML  = "<p style='font-size: 20px'>" + transformaData(data) +"</p>";
+	corpo.innerHTML  = "<p>" + transformaData(data.value) +"</p>";
 }
 
 function transformaData(data) {

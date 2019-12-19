@@ -8,7 +8,8 @@ let td_produtos = document.querySelectorAll('td')
 document.querySelector('#calcular').addEventListener(
     'click', function(event){
             event.preventDefault();
-            setTotal()
+            setTotal();
+            limpaCampos();
     });
 
 
@@ -31,7 +32,7 @@ function setTotal(){
 function encontrarValorPorCodigo(){
     let valor;
     for(let i= 0; i<td_produtos.length; i++){
-            if(td_produtos[i].textContent== codigo.value){
+            if(td_produtos[i].textContent== codigo.valueAsNumber){
              valor = (td_produtos[i +1].textContent).replace(",", ".");
                parseFloat(valor);
                break;
@@ -39,4 +40,9 @@ function encontrarValorPorCodigo(){
    }
    console.log(typeof(valor))
    return valor;
+}
+
+function limpaCampos(){
+    quantidade.value = "";
+    codigo.value = "";
 }

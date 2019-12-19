@@ -1,12 +1,7 @@
 let nome = document.querySelector("#nome")
 let div_nomes_inseridos = document.querySelector("#nomes_div");
 
-let nomes = new Array();
-console.log("funfa");   
-console.log("funfa");   
-console.log("funfa");   
-console.log("funfa");   
-console.log("funfa");       
+let nomes = new Array();     
 
 function adicionarNomeAoVetor(){
         
@@ -22,7 +17,7 @@ function limparCampo(){
 function insertNomes(nome_passado){
     let paragrafo_nomes = document.createElement("p");
     for(let i=0; i<nome_passado.length; i++){
-       paragrafo_nomes.appendChild(document.createTextNode(nome_passado[i]+" , "));
+       paragrafo_nomes.appendChild(document.createTextNode(nome_passado[i].toUpperCase()+" || "));
     }
     return paragrafo_nomes;
 }

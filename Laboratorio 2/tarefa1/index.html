@@ -3,28 +3,35 @@
     <head>
         <title>Calcular Quadrado </title>
         <!-- <link rel = " stylesheet "  href = " css/style.css"/> -->
-
-    <body>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body >
         <h1>Calcular o quadrado</h1>
-        <h2 id="cabecalho">Informe 5 numeros:</h2>
-        <form  action="#" method="get">
-            <input class="inputs" type="number"   /> <br>
+        <h2 id="cabecalho" >Informe 5 numeros:</h2>
+        <form>  
+            <div class="form-group">
+                <input class="inputs" type="number" /> <br>
+                
+                <input class="inputs"type="number" /><br>
+
+                <input class="inputs" type="number"  /><br>
             
-            <input class="inputs"type="number" /><br>
+                <input class="inputs" type="number" /><br>
 
-            <input class="inputs" type="number"  /><br>
-           
-            <input class="inputs" type="number" /><br>
-
-            <input class="inputs" type="number" /><br>
-
-            <button type="button" id="calcular">Calcular</button>
-            
-            <button type="reset" id="btnRand">Limpar</button><br>
-
+                <input class="inputs" type="number" /><br>
         </form>
+        <button type="button" class="btn btn-primary btn-sm" id="calcular">Calcular</button>
+            
+        <button type="reset" class="btn btn-primary btn-sm">Limpar</button>
+
+    
+        
+   
         <script  src = "calcular.js" ></script>
     </body>
+
 </html>
 
 

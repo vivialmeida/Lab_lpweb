@@ -4,40 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Idades</title>
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+    </head>
 </head>
 
 <body class="container">
 
     <h1 id="titulo" class="text-center">Idades</h1>
-
-    <form class="form">
-
-        <div class="form-group">
-            <label for="idade">Idade</label>
-            <input type="number" id="idade"        
-            class="form-control" autofocus >
-        </div>
-
-        <div class="text-center">
-            <button id="btnEnviar" name="idades[]"type="submit">Enviar</button>
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade"        
+                class="form-control" autofocus >
        
+         <button id="btnEnviar" class="btn btn-primary btn-sm" name="idades[]"type="submit">Enviar</button>   
+            </div>   
+        </div>  
+    </form>    
+    <form>
+        <div class="form-group">
 
-            <!-- <button class="btn btn-default"
-             type="reset">Limpar Formulário</button> -->
+            <label for="menor">Menores de Idade:</label>
+            <input  type="number" class="form-control" id="menor" value="0" >   
+     
+            <label for="maior">Maiores de Idade:</label>
+            <input  type="number" class="form-control"id="maior" value= "0"> 
         </div>
 
-        <div class="text-center">
-            <ul id="lista">
-
-            </ul>
+        <div id= "img">
+            <img src="img/idade.jpg">
         </div>
-    </form>
-
-    <label for="maior">Maior de Idade:</label>
-    <input  type="number" id="maior" value= "0"> <br>
-    <label for="menor">Menor de Idade:</label>
-    <input  type="number" id="menor" value="0" > 
+      </form>
  
     <script src="idade.js"></script>   
 </body>

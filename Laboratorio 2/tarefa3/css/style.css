@@ -1,0 +1,34 @@
+
+div, h1, h2{
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+h1{
+    align-content: center;
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+h2{
+    font-size: 18px;
+}
+
+button{
+    margin-top:12px;
+    margin-right: 22px;
+
+}
+body{
+
+    background-color:paleturquoise;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.form-control{
+    max-width: 300px;
+    margin: auto;
+
+
+}

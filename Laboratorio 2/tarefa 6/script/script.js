@@ -2,48 +2,52 @@ let bolo = document.getElementById("bolo");
 let pastel = document.getElementById("pastel");
 let torta = document.getElementById("torta");
 let suco = document.getElementById("suco");
-let refri = document.getElementById("bolo");
-let agua = document.getElementById("bolo");
-let nome = document.querySelector("nome");
+let refri = document.getElementById("refri");
+let agua = document.getElementById("agua");
+let nome = document.querySelector("#nome");
 
-let total;
-let itensConsumo;
+let soma = 0;
+let itensConsumo = [];
 
-document.getElementById("calcular").addEventListener('click',cacular());
+document.getElementById("calcular").addEventListener('click',function(event){
+	event.preventDefault();
+	calcular();
+});
+
 
 function calcular(){
 if (suco.checked == true) {
 	soma += 4.0;
-	itensConsumidos.push("Suco");
+	itensConsumo.push("Suco");
 }
 
 if (refri.checked == true) {
 	soma += 2.50;
-	itensConsumidos.push("Refrigerante");
+	itensConsumo.push("Refrigerante");
 }
 
 if (agua.checked == true) {
 	soma += 1.5;
-	itensConsumidos.push("Água");
+	itensConsumo.push("Água");
 }
 
 if (bolo.checked == true) {
 	soma += 3.5;
-	itensConsumidos.push("Bolo");
+	itensConsumo.push("Bolo");
 }
 
 if (pastel.checked == true) {
 	soma += 3;
-	itensConsumidos.push("Pastel");
+	itensConsumo.push("Pastel");
 }
 
 if (torta.checked == true) {
 	soma += 4;
-	itensConsumidos.push("Torta");
+	itensConsumo.push("Torta");
 }
 
 alert("Cliente: " + nome.value + "\n" +
 		  "Valor a Pagar: " + soma  + "\n" +
-		  "Itens Consumidos: {" + itensConsumidos.join(', ') + "}");
+		  "Itens Consumidos: {" + itensConsumo.join(', ') + "}");
 }
 

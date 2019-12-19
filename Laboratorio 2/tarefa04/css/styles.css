@@ -1,0 +1,55 @@
+
+div, h1, h2{
+    margin: auto;
+    padding: 10px;
+    text-align: center;  
+}
+
+h1{
+    align-content: center;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+h2{
+    font-size: 18px;
+}
+
+button{
+    margin: auto;
+
+}
+
+tfoot{
+    background-color: darkseagreen;
+    font-size: 22px;
+}
+body{
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.form-control{
+    max-width: 300px;
+    margin: auto;
+   
+
+
+}
+
+#imagem{
+
+    margin-left: initial;
+    max-width:10px;
+    max-height:15px;
+}
+#entradas{
+  left: initial;
+  margin-right: 12px;
+}
+
+button{
+    margin: 22px;
+}
+
+
+
