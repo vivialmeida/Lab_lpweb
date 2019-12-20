@@ -17,9 +17,6 @@ class boletimAluno {
         Object.freeze(this );
     }
     
-    // get subTotal() {
-    //     return this._quantidade * this._valor;
-    // }
 
     get nome() {
         return this._nome;
@@ -49,5 +46,19 @@ class boletimAluno {
 
     get pfinal() {
         return this._pfinal;
+    }
+
+    get aprovados(){
+        if(this._situacao.includes("Aprovado")){
+            return 1;
+        }
+        return 0;
+    }
+
+    get reprovados(){
+        if(this._situacao.includes("Reprovado")){
+            return 1;
+        }
+        return 0;
     }
 }

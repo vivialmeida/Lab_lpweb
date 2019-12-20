@@ -1,10 +1,11 @@
 class BoletimController {
-    
+
     
 
     constructor() {
         
         let $ = document.querySelector.bind(document);
+        let labelProvaF = document.getElementById('pFinal');
        
         this._inputNome = $('#nome');
         this._inputN1 = $('#n1');
@@ -69,6 +70,7 @@ class BoletimController {
         this._labelMedia.value = "";
         this._labelPFinal.value="";
         this._labelSitu.value ="";
+        this.labelProvaF.setAttribute("type", "number");
 
 
         this._inputNome.focus();
@@ -87,12 +89,7 @@ class BoletimController {
             this._labelSitu.value= "Aprovado com exame final"
          }else {
               this._labelSitu.value = "Reprovado";
-         }
-
-
-        
-        
-           
+         }  
 
     }
 
@@ -105,6 +102,13 @@ class BoletimController {
     
        return media;
         }
+campoPF(event){
 
+    if (this._calculaMedia() < 70 && this._inputFreq.value < 70){
+            console.log("teste")
+        
+        this.labelProvaF.setAttribute("type", "number");
+    }
+}
 
 }

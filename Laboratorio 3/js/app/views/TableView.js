@@ -37,13 +37,23 @@ class TableView extends View {
             </tbody>
 
                 <tfoot >
+                <tr>
                 <td colspan="7"  align="center" >Alunos Aprovados</td>
                 <td>
+                 ${aluno.getAlunos().reduce((total, aluno)=>total + aluno.aprovados, 0)}
+                </td>
+                </tr>
+                <tr>
+                <td colspan="7"  align="center" >Alunos Reprovados</td>
+                <td>
+                 ${aluno.getAlunos().reduce((total, aluno)=>total + aluno.reprovados,0)}
+                </td>
+                </tr>
                    
                 </td>
             </tfoot>
         </table>
         `;
-        // ${(aluno.getAlunos().filter(aluno=>aluno.situacao =="Aprovado"))}
+       
     }
 }

@@ -9,7 +9,6 @@ class Aluno {
     }
 
     getAlunos() {
-       // return this._itens;
        return [].concat(this._aluno );
     }
 
