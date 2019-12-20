@@ -5,7 +5,6 @@ class BoletimController {
     constructor() {
         
         let $ = document.querySelector.bind(document);
-        let labelProvaF = document.getElementById('pFinal');
        
         this._inputNome = $('#nome');
         this._inputN1 = $('#n1');
@@ -15,7 +14,6 @@ class BoletimController {
         this._labelMedia= $('#media');
         this._labelPFinal= $('#pFinal');
         this._labelSitu= $('#situacao');
-
 
         this.aluno = new Aluno(); 
 
@@ -40,9 +38,6 @@ class BoletimController {
         this.aluno.adiciona(item ); 
         this.tableView.update(this.aluno );
      
-
-    
-
         this._mensagem.texto = `Aluno(a) ${item.nome} foi adicionado com sucesso.`;
         this._mensagemView.update(this._mensagem );
         this._limpaFormulario();
@@ -70,7 +65,7 @@ class BoletimController {
         this._labelMedia.value = "";
         this._labelPFinal.value="";
         this._labelSitu.value ="";
-        this.labelProvaF.setAttribute("type", "number");
+        document.getElementById('pFinal').setAttribute("type", "hidden")
 
 
         this._inputNome.focus();
@@ -81,7 +76,6 @@ class BoletimController {
     
         if( media >= 70 && this._inputFreq.value >= 75){
         this._labelSitu.value = "Aprovado";
-        // this._labelPFinal.setAttribute("type", "hidden");
         }else if (this.media < 30 || this._inputFreq.value < 75){
             this._labelSitu.value = "Reprovado";
         }else if(media + parseFloat(final.value) >= 50){
@@ -97,17 +91,15 @@ class BoletimController {
     _calculaMedia(){
         let media = (parseFloat(this._inputN1.value) +parseFloat(this._inputN2.value) + parseFloat(this._inputN3.value))/3
        
-        console.log(media);
         this._labelMedia.value = media;
     
        return media;
         }
-campoPF(event){
+campoProvaFinal(event){
+    let labelProvaF = document.getElementById('pFinal');
 
-    if (this._calculaMedia() < 70 && this._inputFreq.value < 70){
-            console.log("teste")
-        
-        this.labelProvaF.setAttribute("type", "number");
+    if (this._calculaMedia() < 70 && this._inputFreq.value > 70){
+            labelProvaF.setAttribute("type", "number");
     }
 }
 
